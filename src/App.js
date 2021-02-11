@@ -136,10 +136,8 @@ class App extends Component {
 
     const transactionsBeforeThisDayAndInThisDay = currentMonthTransactions.filter(
       ({date: transactionDate}) =>
-        moment(transactionDate, 'DD.MM.YYYY').isBefore(
-          date,
-          'date',
-        ) ||
+        moment(transactionDate, 'DD.MM.YYYY').isBefore(date,'date',)
+        ||
         moment(transactionDate, 'DD.MM.YYYY').isSame(date, 'date'),
     );
 
